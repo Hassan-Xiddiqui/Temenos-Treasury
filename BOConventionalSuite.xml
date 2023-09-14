@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BO Conventional Suite">
+    <listeners>
+        <listener class-name="Resources.Listeners"/>
+    </listeners>
+
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury Inputter2">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOInputter"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.CounterPartySetup">-->
+<!--                <methods>-->
+<!--                    <include name="CounterPartySetupCreation"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury inp3">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOInputter2"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.StandardSettlementInstruction_AgencySetup">-->
+<!--                <methods>-->
+<!--                    <include name="StandardSettlementInstruction_AgencySetup"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury Inputter4">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOInputter2"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.CreationOfDealerLimit">-->
+<!--                <methods>-->
+<!--                    <include name="CreationOfDealerLimit"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury Inputter5">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOInputter"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.NostroAccountCreation">-->
+<!--                <methods>-->
+<!--                    <include name="NostroAccountCreation"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury inp6">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOLimitInput"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.CounterpartyLimitSetup">-->
+<!--                <methods>-->
+<!--                    <include name="CounterpartyLimitSetup"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury auth6">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOLimitAuth"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.CounterpartyLimitSetup">-->
+<!--                <methods>-->
+<!--                    <include name="CounterpartyLimitSetup_Authorization"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury inp7">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOLimitInput"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.CounterpartyLimitSetup">-->
+<!--                <methods>-->
+<!--                    <include name="CounterpartyLimitSetupChild"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury auth7">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOLimitAuth"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.CounterpartyLimitSetup">-->
+<!--                <methods>-->
+<!--                    <include name="CounterpartyLimitSetupChild_Authorization"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury inp8">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOInputter"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.Sec_Sukuk">-->
+<!--                <methods>-->
+<!--                    <include name="Sukuk"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury inp9">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOInputter"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.Sec_TFC">-->
+<!--                <methods>-->
+<!--                    <include name="TFC"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury inp10">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="BOInputter"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.BackOffice.Conventional.Sec_TreasuryBill">-->
+<!--                <methods>-->
+<!--                    <include name="TBill"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+        <test verbose="1" preserve-order="true" name="Treasury inp11">
+            <groups>
+                <run>
+                    <include name="BOInputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.BackOffice.Conventional.Sec_PIB">
+                    <methods>
+                        <include name="PakistanInvestmentBondMaintenance"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+
+<!--        <test verbose="1" preserve-order="true" name="Treasury inp12">-->
+<!--            <groups>-->
+<!--                <run>-->
+<!--                    <include name="BOInputter"/>-->
+<!--                </run>-->
+<!--            </groups>-->
+<!--            <classes>-->
+<!--                <class name="Test.Scripts.BackOffice.Conventional.SecurityAccountMaster">-->
+<!--                    <methods>-->
+<!--                        <include name="securityAccountMaster"/>-->
+<!--                    </methods>-->
+<!--                </class>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+<!--            <test verbose="1" preserve-order="true" name="Treasury inp13">-->
+<!--                <groups>-->
+<!--                    <run>-->
+<!--                        <include name="BOInputter"/>-->
+<!--                    </run>-->
+<!--                </groups>-->
+<!--                <classes>-->
+<!--                    <class name="Test.Scripts.BackOffice.Conventional.FundsTransfer">-->
+<!--                        <methods>-->
+<!--                            <include name="FundsTransferBetweenAccounts"/>-->
+<!--                        </methods>-->
+<!--                    </class>-->
+<!--                </classes>-->
+<!--            </test>-->
+
+<!--        <test verbose="1" preserve-order="true" name="Treasury Auth13">-->
+<!--            <groups>-->
+<!--                <run>-->
+<!--                    <include name="BOAuthorizer"/>-->
+<!--                </run>-->
+<!--            </groups>-->
+<!--            <classes>-->
+<!--                <class name="Test.Scripts.BackOffice.Conventional.FundsTransfer">-->
+<!--                <methods>-->
+<!--                    <include name="authfT"/>-->
+<!--                </methods>-->
+<!--                </class>-->
+<!--            </classes>-->
+<!--        </test>-->
+
+
+</suite>

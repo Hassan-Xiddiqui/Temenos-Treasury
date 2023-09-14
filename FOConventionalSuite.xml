@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Front Office Conventional Suite">
+    <listeners>
+        <listener class-name="Resources.Listeners"/>
+    </listeners>
+
+    <test verbose="1" preserve-order="true" name="Treasury Inputter1">
+        <groups>
+            <run>
+                <include name="Inputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.FX_Forward">
+                <methods>
+                    <include name="inputForexForward"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth1">
+        <groups>
+            <run>
+                <include name="Authorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.FX_Forward">
+                <methods>
+                    <include name="inputForexForwardAuth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury Inputter2">
+        <groups>
+            <run>
+                <include name="Inputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.FX_SpotDeal">
+                <methods>
+                    <include name="spotDealInputter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Auth2">
+            <groups>
+                <run>
+                    <include name="Authorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.FX_SpotDeal">
+                <methods>
+                    <include name="spotDealAuth"/>
+                </methods>
+                </class>
+            </classes>
+        </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury Inputter3">
+        <groups>
+            <run>
+                <include name="Inputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.FX_Swap">
+            <methods>
+                <include name="inputForexSwap"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth3">
+        <groups>
+            <run>
+                <include name="Authorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.FX_Swap">
+            <methods>
+                <include name="inputForexSwapdAuth"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Inputter4">
+        <groups>
+            <run>
+                <include name="Inputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.MM_CallBorrowing_FCY">
+                <methods>
+                    <include name="CallBorrowingFCYDealInputter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth4">
+        <groups>
+            <run>
+                <include name="BOAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.MM_CallBorrowing_FCY">
+                <methods>
+                    <include name="CallBorrowingFCYDealAuth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter5">
+            <groups>
+                <run>
+                    <include name="Inputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.MM_CallBorrowing_LCY">
+                    <methods>
+                        <include name="CallBorrowingDealLCYPMRC"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth5">
+        <groups>
+            <run>
+                <include name="BOAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.MM_CallBorrowing_LCY">
+                <methods>
+                    <include name="CallPlacementLCYDealPMRCAuth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter6">
+            <groups>
+                <run>
+                    <include name="Inputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.MM_CallBorrowingsPMRC_LCY">
+                    <methods>
+                        <include name="CallBorrowingDealLCYPMRC"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth6">
+        <groups>
+            <run>
+                <include name="BOAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.MM_CallBorrowingsPMRC_LCY">
+                <methods>
+                    <include name="CallPlacementLCYDealPMRCAuth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+                <test verbose="1" preserve-order="true" name="Treasury Inputter7">
+                <groups>
+                    <run>
+                        <include name="Inputter"/>
+                    </run>
+                </groups>
+                <classes>
+                    <class name="Test.Scripts.FrontOffice.Conventional.MM_CallPlacement_FCY">
+                        <methods>
+                            <include name="CallPlacementDealFCYInputter"/>
+                        </methods>
+                    </class>
+                </classes>
+            </test>
+
+            <test verbose="1" preserve-order="true" name="Treasury Auth7">
+                <groups>
+                    <run>
+                        <include name="BOAuthorizer"/>
+                    </run>
+                </groups>
+                <classes>
+                    <class name="Test.Scripts.FrontOffice.Conventional.MM_CallPlacement_FCY">
+                        <methods>
+                            <include name="CallPlacementDealFCYAuth"/>
+                        </methods>
+                    </class>
+                </classes>
+            </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Inputter7">
+        <groups>
+            <run>
+                <include name="Inputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.MM_CallPlacement_LCY">
+                <methods>
+                    <include name="CallPlacementLCYDealInputter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth7">
+        <groups>
+            <run>
+                <include name="BOAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.MM_CallPlacement_LCY">
+                <methods>
+                    <include name="CallPlacementLCYDealAuth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter8">
+            <groups>
+                <run>
+                    <include name="Inputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.Sukuk_Bonds">
+                    <methods>
+                        <include name="sukukbondSale"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+
+        <test verbose="1" preserve-order="true" name="Treasury Auth8">
+            <groups>
+                <run>
+                    <include name="BOAuthorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.Sukuk_Bonds">
+                    <methods>
+                        <include name="sukukbondSaleAuth"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter9">
+            <groups>
+                <run>
+                    <include name="Inputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.Sukuk_Bonds">
+                    <methods>
+                        <include name="sukukbondPurchase"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+            <test verbose="1" preserve-order="true" name="Treasury Auth9">
+                <groups>
+                    <run>
+                        <include name="BOAuthorizer"/>
+                    </run>
+                </groups>
+                <classes>
+                    <class name="Test.Scripts.FrontOffice.Conventional.Sukuk_Bonds">
+                    <methods>
+                        <include name="sukukbondPurchaseAuth"/>
+                    </methods>
+                    </class>
+                </classes>
+            </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter10">
+            <groups>
+                <run>
+                    <include name="Inputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.PIB">
+                <methods>
+                    <include name="PIBPurchase"/>
+                </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Auth10">
+            <groups>
+                <run>
+                    <include name="BOAuthorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.PIB">
+                <methods>
+                    <include name="PIBPurchaseAuth"/>
+                </methods>
+                </class>
+            </classes>
+        </test>
+
+
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter11">
+            <groups>
+                <run>
+                    <include name="Inputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.PIB">
+                    <methods>
+                        <include name="PIBSale"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Auth11">
+            <groups>
+                <run>
+                    <include name="BOAuthorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.PIB">
+                    <methods>
+                        <include name="PIBSaleAuth"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+            <test verbose="1" preserve-order="true" name="Treasury Inputter12">
+                <groups>
+                    <run>
+                        <include name="Inputter"/>
+                    </run>
+                </groups>
+                <classes>
+                    <class name="Test.Scripts.FrontOffice.Conventional.Treasury_Bill">
+                        <methods>
+                            <include name="TreasuryBillSale"/>
+                        </methods>
+                    </class>
+                </classes>
+            </test>
+
+            <test verbose="1" preserve-order="true" name="Treasury Auth12">
+                <groups>
+                    <run>
+                        <include name="BOAuthorizer"/>
+                    </run>
+                </groups>
+                <classes>
+                    <class name="Test.Scripts.FrontOffice.Conventional.Treasury_Bill">
+                        <methods>
+                            <include name="TreasuryBillSaleAuth"/>
+                        </methods>
+                    </class>
+                </classes>
+            </test>
+
+
+                <test verbose="1" preserve-order="true" name="Treasury Inputter13">
+                    <groups>
+                        <run>
+                            <include name="Inputter"/>
+                        </run>
+                    </groups>
+                    <classes>
+                        <class name="Test.Scripts.FrontOffice.Conventional.Treasury_Bill">
+                            <methods>
+                                <include name="TreasuryBillPurchase"/>
+                            </methods>
+                        </class>
+                    </classes>
+                </test>
+
+                <test verbose="1" preserve-order="true" name="Treasury Auth13">
+                    <groups>
+                        <run>
+                            <include name="BOAuthorizer"/>
+                        </run>
+                    </groups>
+                    <classes>
+                        <class name="Test.Scripts.FrontOffice.Conventional.Treasury_Bill">
+                            <methods>
+                                <include name="TreasuryBillPurchaseAuth"/>
+                            </methods>
+                        </class>
+                    </classes>
+                </test>
+
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter14">
+            <groups>
+                <run>
+                    <include name="Inputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.Term_Finance_Certificate">
+                    <methods>
+                        <include name="TFCSale"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Auth14">
+            <groups>
+                <run>
+                    <include name="BOAuthorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.Term_Finance_Certificate">
+                    <methods>
+                        <include name="TFCSaleAuth"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter15">
+            <groups>
+                <run>
+                    <include name="Inputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.Term_Finance_Certificate">
+                    <methods>
+                        <include name="TFCPurchase"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Auth15">
+            <groups>
+                <run>
+                    <include name="BOAuthorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.Term_Finance_Certificate">
+                    <methods>
+                        <include name="TFCPurchaseAuth"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter16">
+            <groups>
+                <run>
+                    <include name="BOInputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.Sec_Enquiries">
+                   <methods>
+                       <include name="viewHoldingsReport"/>
+                       <include name="viewOutrightEnquiry"/>
+                   </methods>
+                </class>
+            </classes>
+        </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury Inputter17">
+        <groups>
+            <run>
+                <include name="Inputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.Repo_PIBs">
+                <methods>
+                    <include name="RepoPIBs"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth17">
+        <groups>
+            <run>
+                <include name="BOAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.Repo_PIBs">
+                <methods>
+                    <include name="RepoPIBsAuth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Inputter18">
+        <groups>
+            <run>
+                <include name="Inputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.Repo_FloatingRatePIB">
+                <methods>
+                    <include name="FloatingRateRepoPIB"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth18">
+        <groups>
+            <run>
+                <include name="BOAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.Repo_FloatingRatePIB">
+                <methods>
+                    <include name="FloatingRateRepoPIBAuth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Inputter19">
+        <groups>
+            <run>
+                <include name="Inputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.Repo_TBills">
+                <methods>
+                    <include name="Repo_TBills"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth19">
+        <groups>
+            <run>
+                <include name="BOAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.Repo_TBills">
+                <methods>
+                    <include name="Repo_TBillsAuth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>

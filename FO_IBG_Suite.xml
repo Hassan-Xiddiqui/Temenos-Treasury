@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BO Conventional Suite">
+    <listeners>
+        <listener class-name="Resources.Listeners"/>
+    </listeners>
+
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury Inputter">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="IBGInputter"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.FrontOffice.IBG.Sec_BaiMuajjal_Manual">-->
+<!--            <methods>-->
+<!--                <include name="Sec_BaiMuajjal_ManualInputter"/>-->
+<!--            </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Inputter">
+        <groups>
+            <run>
+                <include name="IBGInputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.IBG.Sec_Sukuk">
+                <methods>
+                    <include name="Sec_SukukInputterPartialRedemption"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+</suite>

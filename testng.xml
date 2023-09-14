@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Treasury Test Suite">
+    <listeners>
+        <listener class-name="Resources.Listeners"/>
+    </listeners>
+
+    <test verbose="1" preserve-order="true" name="Treasury">
+    <groups>
+        <run>
+            <include name="BOInputter"/>
+        </run>
+    </groups>
+    <classes>
+        <class name="Test.Scripts.BackOffice.Conventional.PakistanInvestmentBondMaintenance">
+            <methods>
+                <include name="PakistanInvestmentBondMaintenance"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+    <test verbose="1" preserve-order="true" name="Treasury_Authorizer">
+        <groups>
+            <run>
+                <include name="BOLimitAuth"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.BackOffice.Conventional.StandardSettlementInstruction_AgencySetup">
+                <methods>
+                   <include name="StandardSettlementInstruction_AgencySetup_Authorizer"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

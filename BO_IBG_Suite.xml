@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BO Conventional Suite">
+    <listeners>
+        <listener class-name="Resources.Listeners"/>
+    </listeners>
+
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter2">
+            <groups>
+                <run>
+                    <include name="BOInputterIBG"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.BackOffice.IBG.CounterPartySetup">
+                <methods>
+                    <include name="CounterPartySetupCreation"/>
+                </methods>
+                </class>
+            </classes>
+        </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury inp3">
+        <groups>
+            <run>
+                <include name="BOInputterIBG"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.BackOffice.IBG.StandardSettlementInstruction_AgencySetup">
+                <methods>
+                    <include name="StandardSettlementInstruction_AgencySetup"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Inputter4">
+        <groups>
+            <run>
+                <include name="BOInputterIBG"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.BackOffice.IBG.FundsTransferBetweenAccounts">
+                <methods>
+                    <include name="FundsTransferBetweenAccounts"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+        <test verbose="1" preserve-order="true" name="Treasury Auth4">
+            <groups>
+                <run>
+                    <include name="IBGAuthorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.BackOffice.IBG.FundsTransferBetweenAccounts">
+                <methods>
+                    <include name="FundsTransferBetweenAccounts_Authorization"/>
+                </methods>
+                </class>
+            </classes>
+        </test>
+
+
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter5">
+            <groups>
+                <run>
+                    <include name="BOInputterIBG"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.BackOffice.IBG.FundsTransferBetweenNostroAcc">
+                    <methods>
+                        <include name="FundsTransferBetweenNostroAcc"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+
+            <test verbose="1" preserve-order="true" name="Treasury Auth5">
+                <groups>
+                    <run>
+                        <include name="IBGAuthorizer"/>
+                    </run>
+                </groups>
+                <classes>
+                    <class name="Test.Scripts.BackOffice.IBG.FundsTransferBetweenNostroAcc">
+                    <methods>
+                        <include name="FundsTransferBetweenNostroAcc_Authorization"/>
+                    </methods>
+                    </class>
+                </classes>
+            </test>
+
+
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter6">
+        <groups>
+            <run>
+                <include name="BOInputterIBG"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.BackOffice.IBG.NonCheckingAccountCreation">
+                <methods>
+                    <include name="NonCheckingAccountCreation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth6">
+        <groups>
+            <run>
+                <include name="IBGAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.BackOffice.IBG.NonCheckingAccountCreation">
+                <methods>
+                    <include name="NonCheckingAccountCreation_Authorization"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury inp7">
+        <groups>
+            <run>
+                <include name="BOInputterIBG"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.BackOffice.IBG.NostroAccountCreation">
+                <methods>
+                    <include name="NostroAccountCreation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury auth7">
+        <groups>
+            <run>
+                <include name="IBGAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.BackOffice.IBG.NostroAccountCreation">
+                <methods>
+                    <include name="NostroAccountCreation_Authorization"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury inp8">
+        <groups>
+            <run>
+                <include name="BOInputterIBG"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.BackOffice.IBG.Sec_Sukuk">
+                <methods>
+                    <include name="Sukuk"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury auth8">
+        <groups>
+            <run>
+                <include name="IBGAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.BackOffice.IBG.Sec_Sukuk">
+                <methods>
+                    <include name="SukukAuth"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury inp9">
+        <groups>
+            <run>
+                <include name="BOInputterIBG"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.BackOffice.IBG.VostroAccountCreation">
+                <methods>
+                    <include name="VostroAccountCreation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+        <test verbose="1" preserve-order="true" name="Treasury auth9">
+            <groups>
+                <run>
+                    <include name="IBGAuthorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.BackOffice.IBG.VostroAccountCreation">
+                    <methods>
+                        <include name="VostroAccountCreation_Authorization"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+
+</suite>

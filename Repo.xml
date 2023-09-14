@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Treasury Test Suite">
+    <listeners>
+        <listener class-name="Resources.Listeners"/>
+    </listeners>
+
+    <test verbose="1" preserve-order="true" name="Treasury">
+        <groups>
+            <run>
+                <include name="IBGInputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.IBG.RepoSukuk">
+                <methods>
+                    <include name="RepoSukuk"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury_Authorizer">
+        <groups>
+            <run>
+                <include name="IBGAuthorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.IBG.RepoSukuk">
+                <methods>
+                    <include name="Authorization"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test verbose="1" preserve-order="true" name="Treasury1">
+        <groups>
+            <run>
+                <include name="IBGInputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.IBG.RepoSukuk">
+                <methods>
+                    <include name="RepoSukukEdit"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury2">
+        <groups>
+            <run>
+                <include name="IBGInputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.IBG.RepoSukuk">
+                <methods>
+                    <include name="RepoSukukDelete"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BO Conventional Suite">
+    <listeners>
+        <listener class-name="Resources.Listeners"/>
+    </listeners>
+
+        <test verbose="1" preserve-order="true" name="Treasury Inputter">
+            <groups>
+                <run>
+                    <include name="BOInputterIBG"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.BackOffice.IBG.CustomerCreation">
+                <methods>
+                    <include name="CustomerCreation"/>
+                </methods>
+                </class>
+            </classes>
+        </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Auth">
+            <groups>
+                <run>
+                    <include name="IBGAuthorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.BackOffice.IBG.CustomerCreation">
+                <methods>
+                    <include name="CustomerCreation_Authorization"/>
+                </methods>
+                </class>
+            </classes>
+        </test>
+
+
+
+</suite>

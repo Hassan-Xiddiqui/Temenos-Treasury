@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Treasury Test Suite">
+    <listeners>
+        <listener class-name="Resources.Listeners"/>
+    </listeners>
+    <test verbose="1" preserve-order="true" name="Treasury_FWDtoFWDswapDeal">
+        <groups>
+            <run>
+                <include name="Inputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.FX_Forward">
+            <methods>
+                <include name="inputForexForward"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Auth">
+            <groups>
+                <run>
+                    <include name="Authorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.FX_Forward">
+                <methods>
+                    <include name="inputForexForwardAuth"/>
+                </methods>
+                </class>
+            </classes>
+        </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury_InputForexForward">
+        <groups>
+            <run>
+                <include name="Inputter"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.FX_SpotDeal">
+                <methods>
+                    <include name="spotDealInputter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+        <test verbose="1" preserve-order="true" name="Treasury Auth">
+            <groups>
+                <run>
+                    <include name="Authorizer"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.FX_SpotDeal">
+                <methods>
+                    <include name="spotDealAuth"/>
+                </methods>
+                </class>
+            </classes>
+        </test>
+
+
+<!--    <test verbose="1" preserve-order="true" name="Treasury_InputForexSwap">-->
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="Inputter"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="Test.Scripts.FrontOffice.Conventional.FX_Swap">-->
+<!--                <methods>-->
+<!--                    <include name="inputForexSwap"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+        <test verbose="2" preserve-order="true" name="Retail Operations View SLip">
+            <groups>
+                <run>
+                    <include name="Inputter"/>
+                </run>
+            </groups>
+            <classes>
+                <class name="Test.Scripts.FrontOffice.Conventional.FX_Swap">
+                    <methods>
+                        <include name="inputForexSwap"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+
+    <test verbose="1" preserve-order="true" name="Treasury Auth">
+        <groups>
+            <run>
+                <include name="Authorizer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Test.Scripts.FrontOffice.Conventional.FX_Swap">
+            <methods>
+                <include name="inputForexSwapdAuthinputForexSwapdAuth"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>
